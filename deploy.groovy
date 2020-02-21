@@ -4,6 +4,6 @@ import ru.sbrf.cred.Cred.*
 node() {
     stage("dummy") {
         echo("ok")
-        cred.say(this, "GO!")
+        say(this, "GO!")
     }
 }
