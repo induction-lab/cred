@@ -1,4 +1,5 @@
-@Library('cred@master') import ru.sbrf.cred.*
+@Library('cred@master')
+import ru.sbrf.cred.Cred
 
 node() {
     stage("dummy") {
