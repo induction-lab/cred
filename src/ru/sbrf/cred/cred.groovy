@@ -1,6 +1,6 @@
 package ru.sbrf.cred
 
-class cred {
+class Cred {
 
     def use(script, credId, Closure body) {
         script.withCredentials([[
