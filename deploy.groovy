@@ -1,4 +1,4 @@
-@Library('cred')
+@Library('cred@master')
 import ru.sbrf.cred
 
 node() {
