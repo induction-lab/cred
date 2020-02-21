@@ -1,14 +1,18 @@
 package ru.sbrf.cred
 
-def withCred(script, credId, Closure body) {
-    script.withCredentials([[
-        $class: 'UsernamePasswordMultiBinding',
-        credentialsId: credId,
-        passwordVariable: 'p',
-        usernameVariable: 'u'
-    ]]) { body(script.u, script.p) }
-}
+class cred {
 
-def say(script, text) {
-    script.echo(text)
-};
+    def use(script, credId, Closure body) {
+        script.withCredentials([[
+            $class: 'UsernamePasswordMultiBinding',
+            credentialsId: credId,
+            passwordVariable: 'p',
+            usernameVariable: 'u'
+        ]]) { body(script.u, script.p) }
+    }
+
+    def say(script, text) {
+        script.echo(text)
+    };
+
+}

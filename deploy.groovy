@@ -1,5 +1,5 @@
 @Library('cred@master')
-//import ru.sbrf.cred
+import ru.sbrf.cred
 
 node() {
     stage("dummy") {
