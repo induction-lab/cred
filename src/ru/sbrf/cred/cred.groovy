@@ -6,5 +6,9 @@ def withCred(script, credId, Closure body) {
         credentialsId: credId,
         passwordVariable: 'p',
         usernameVariable: 'u'
-    ]]) { body() }
+    ]]) { body(script.u, script.p) }
 }
+
+def say(script, text) {
+    script.echo(text)
+};
