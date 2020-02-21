@@ -2,7 +2,7 @@ package ru.sbrf.cred
 
 class Cred {
 
-    def use(script, credId, Closure body) {
+    static def use(script, credId, Closure body) {
         script.withCredentials([[
             $class: 'UsernamePasswordMultiBinding',
             credentialsId: credId,
@@ -11,7 +11,7 @@ class Cred {
         ]]) { body(script.u, script.p) }
     }
 
-    def say(script, text) {
+    static def say(script, text) {
         script.echo(text)
     };
 

@@ -3,5 +3,6 @@
 node() {
     stage("dummy") {
         echo("ok")
+        Cred.say(this, "GO!")
     }
 }
