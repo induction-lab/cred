@@ -13,6 +13,6 @@ class Cred {
 
     static def say(script, text) {
         script.echo(text)
-    };
+    }
 
 }

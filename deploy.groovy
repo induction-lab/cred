@@ -1,10 +1,9 @@
 @Library('cred@master')
-import ru.sbrf.cred.*
+import ru.sbrf.cred.Cred.*
 
 node() {
     stage("dummy") {
         echo("ok")
-        def cred = new Cred()
         cred.say(this, "GO!")
     }
 }
